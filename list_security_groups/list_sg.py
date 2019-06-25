@@ -42,7 +42,7 @@ def format_tags(tags):
     return res[:-2]
 
 def get_region(session):
-    ec2 = session.client('ec2')
+    ec2 = session.client('ec2', region="us-east-1")
     regions = ec2.describe_regions()
     for region in regions['Regions']:
         yield region['RegionName']

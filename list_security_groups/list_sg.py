@@ -58,8 +58,8 @@ def get_ip_permissions_vpc_and_sg(ec2_ressources, ip_permission_type):
 
 def get_sg(profile, data=None):
     ret = []
-    for region in get_region(boto3.Session(profile_name=profile)):
-        ec2_ressources = boto3.Session(region_name=region, profile_name=profile).resource('ec2')
+    for region in get_region(boto3.Session()):
+        ec2_ressources = boto3.Session(region_name=region).resource('ec2')
         for vpc, security_group, ip_permission_egress, ip_permission_ingress, tags in get_ip_permissions_vpc_and_sg(ec2_ressources, ""):
             i = 0
             ip_permission_egress = format_security_group_output(ip_permission_egress)

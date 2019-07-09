@@ -12,7 +12,8 @@ Change the BUCKET var, it should match your S3 target bucket
 
 ### Attach the following role to your lambda
 
-```{
+```
+{
     "Version": "2012-10-17",
     "Statement": [
         {
@@ -46,13 +47,15 @@ Change the BUCKET var, it should match your S3 target bucket
             "Resource": "*"
         }
     ]
-}```
+}
+```
 
 ### Create a role for you ec2 instances
 
 Attach Readonly policy and the following policy
 
-```{
+```
+{
     "Version": "2012-10-17",
     "Statement": [
         {
@@ -70,7 +73,8 @@ Attach Readonly policy and the following policy
             "Resource": "*"
         }
     ]
-}```
+}
+```
 
 ### Cloudwatch trigger
 

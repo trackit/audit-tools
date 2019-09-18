@@ -19,6 +19,6 @@ The dependencies are :
 - Python 2
 - boto3
 
-To launch it, just run `python2 check-ec2-publicly-exposed.py --profile [PROFILE_NAME, PROFILE_NAME, ...]`.
+To launch it, just run `python2 list_elbs.py --profile [PROFILE_NAME, PROFILE_NAME, ...]`.
 
 The output file will be saved as `report.csv`, or you can change it with the `-o` argument.
